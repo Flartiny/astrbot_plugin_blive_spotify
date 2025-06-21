@@ -2,7 +2,7 @@ from astrbot.api.event import filter, AstrMessageEvent, MessageEventResult
 from astrbot.api.star import Context, Star, register
 from astrbot.core import AstrBotConfig
 from astrbot.api import logger
-from .message import DanmakuMessage
+from data.plugins.astrbot_plugin_bilibili_live.blivedm.models.message import DanmakuMessage
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 
