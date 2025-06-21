@@ -42,6 +42,14 @@ class BliveSpotify(Star):
         )
 
         sp = spotipy.Spotify(auth_manager=auth_manager)
+        from spotipy.exceptions import SpotifyException
+        try:
+            user = sp.current_user()
+            logger.info(f"✅ Spotify 连接成功！已验证用户：{user['display_name']}")
+        except SpotifyException as e:
+            logger.error(f"❌ Spotify 连接失败或授权无效: {e}")
+        except Exception as e:
+            logger.error(f"❌ 发生了一个未知错误: {e}")
         return sp
 
     async def spotify_jukebox(self, message):
