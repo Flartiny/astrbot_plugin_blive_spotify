@@ -1,0 +1,20 @@
+{
+    "client_id": {
+        "description": "Spotify Client ID",
+        "type": "string",
+        "default": "",
+        "hint": "Spotify Client ID"
+    },
+    "client_secret": {
+        "description": "Spotify Client Secret",
+        "type": "string",
+        "default": "",
+        "hint": "Spotify Client Secret"
+    },
+    "redirect_uri": {
+        "description": "Spotify Redirect URI",
+        "type": "string",
+        "default": "",
+        "hint": "Spotify Redirect URI"
+    }
+}
